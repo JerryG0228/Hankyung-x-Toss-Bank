@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>14번 문제</title>
+    <style>
+      fieldset {
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>설문조사</h1>
+    <form>
+      <fieldset>
+        <legend>성별과 나이를 입력하세요.</legend>
+        <label for="gender">성별: </label>
+        <input type="radio" value="male" name="gender">남자
+        <input type="radio" value="female" name="gender">여자
+        <br />
+        <label for="age">나이: </label>
+        <input type="number"> 
+      </input>
+      </fieldset>
+
+      <br />
+
+      <fieldset>
+        <legend>관심 분야를 선택하세요.(1개 이상)</legend>
+        <label for="interests"></label>
+        <input type="checkbox" name="interests" value="디지털 콘텐츠">디지털 콘텐츠
+        <input type="checkbox" name="interests" value="웹 프로그래밍">웹 프로그래밍
+        <input type="checkbox" name="interests" value="데이터베이스">데이터베이스
+        <input type="checkbox" name="interests" value="전자출판">전자출판
+      </fieldset>
+
+      <br />
+
+      <fieldset>
+        <legend>다음 문항에 대해 5점 척도로 답하세요.</legend>
+        <label for="review"></label>
+        본 세미나의 주제는 만족스러운가? 1 <input type="range" min="1" max="5"> 5<br />
+        본 세미나의 초청 강사는 만족스러운가? 1 <input type="range" min="1" max="5"> 5<br />
+        본 세미나의 강의 시간은 적당한가? 1 <input type="range" min="1" max="5"> 5<br />
+      </fieldset>
+
+      <br />
+
+      기타 의견 사항<br />
+      <textarea name="comments"></textarea>
+    </form>
+
+    <br />
+      <button>확인</button>
+      <button>취소</button>
+  </body>
+</html>

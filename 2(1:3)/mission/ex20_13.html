@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>13번 문제</title>
+    <style>
+      fieldset {
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>레스토랑 예약하기</h1>
+    <form>
+      <fieldset>
+        <legend>예약자 정보</legend>
+        <label for="name">예약자: </label>
+        <input type="text" id="name" /> <br />
+        <label for="phone">연락처: </label>
+        <input type="number" id="phone" placeholder="000-0000-0000" /><br />
+        <label for="people">예약인원: </label>
+        <select id="people">
+          <option value="2">2명</option>
+          <option value="3">3명</option>
+          <option value="4">4명</option>
+          <option value="more">5인 이상</option>
+        </select>
+      </fieldset>
+
+      <br />
+      <fieldset>
+        <legend>일자 선택 및 시간 선택</legend>
+        <label for="date"></label>
+        <input type="date" />
+        <label for="time"></label>
+        <input type="time" />
+      </fieldset>
+    </form>
+
+    <br />
+    <button>예약</button>
+    <button>취소</button>
+  </body>
+</html>
