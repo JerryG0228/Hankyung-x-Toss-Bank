@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시멘틱 태그</title>
+    <!-- Semantic Tag -->
+    <!-- 웹페이지의 공통적인 공간 구성요소를 태그형식으로 분류한 것 -->
+    <!-- 공통적인 구성요소: 헤더(header), 푸터(footer), 메인(main), 사이드(aside), 메뉴바(nav) -->
+    <!-- div 태그와 기능적으로 똑같음 -->
+    <!-- header tag : 상단공간(헤더) -->
+    <!-- nav tag : 메뉴바 -->
+    <!-- footer : 바닥공간 -->
+    <!-- main tag : 주 콘텐츠 공간(section + aside) -->
+    <!-- section tag : main의 특정 콘텐츠 공간 -->
+    <!-- aside tag : 사이드에 위치한 콘텐츠 공간 -->
+    <style>
+      * {
+        border: 1px solid tomato;
+      }
+      ul,
+      li {
+        display: inline;
+      }
+      section {
+        /* display: inline으로 만들고, 오른쪽 정렬 */
+        float: right;
+        width: 80%;
+      }
+      aside {
+        /* display: inline으로 만들고, 왼쪽 정렬 */
+        float: left;
+        width: 18%;
+      }
+      footer {
+        /* float: right left 지워준다. block으로 돌아감. */
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <header>헤더 영역</header>
+    <nav>
+      <ul>
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere enim accusantium facilis nostrum, consectetur totam porro. Soluta
+          nulla placeat doloremque dolorum voluptates, numquam, alias unde maxime reprehenderit exercitationem, culpa quibusdam.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere enim accusantium facilis nostrum, consectetur totam porro. Soluta
+          nulla placeat doloremque dolorum voluptates, numquam, alias unde maxime reprehenderit exercitationem, culpa quibusdam.
+        </p>
+      </section>
+      <aside>
+        <ul>
+          <li style="display: block"><a href="#">메뉴1</a></li>
+          <li style="display: block"><a href="#">메뉴2</a></li>
+          <li style="display: block"><a href="#">메뉴3</a></li>
+        </ul>
+      </aside>
+    </main>
+    <footer>푸터 영역</footer>
+  </body>
+</html>
