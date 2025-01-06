@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력태그의 종류2</title>
+  </head>
+  <body>
+    <form action="http://myserver.com" method="get">
+      <!-- button 태그 : HTML 4.0 지원 -->
+      <!-- type은 default값이 submit임 -->
+      <!-- type을 반드시 사용! -->
+      <button>제출 버튼 1</button>
+      <button type="submit">제출 버튼 2</button>
+      <button type="button" onclick="alert('클릭')">특정 이벤트 호출 버튼</button>
+      <button type="reset">리셋 버튼</button>
+      <br />
+      <!-- formaction 속성 -->
+      <button type="submit" formaction="http://myserver2.com">다른 주소로 전송</button>
+      <!-- 이미지 버튼 -->
+      <input type="image" src="./서시이미지.png" alt="image" width="50px" height="50px" />
+    </form>
+  </body>
+</html>

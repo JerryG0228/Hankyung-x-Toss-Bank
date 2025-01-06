@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력양식 태그 - form태그</title>
+    <!-- 로그인, 회원가입 화면에서 사용자의 정보를 서버로 전송하는 용도 -->
+
+    <!-- 웹 브라우저가 서버에 데이터를 전송하는 방법 -->
+    <!-- 1. form 태그 통신 : GET/POST 메소드 -->
+    <!-- 2. 웹 브라우저 주소줄을 이용한 통신 : GET 메소드 -->
+    <!-- a 태그 - 하이퍼링크 : GET 메소드 -->
+    <!-- 3. JavaScript를 이용한 통신 : fetch, ajax 함수, axios 함수, etc... -->
+
+    <!-- HTTP GET 방식 -->
+    <!-- localhost(도메인) = 127.0.0.1(ip) -->
+    <!-- http://localhost:3000/login?id=admin&pw=1234 -->
+    <!-- http : 통신규약(프로토콜), Scheme -->
+    <!-- :// : 구분자 -->
+    <!-- localhost(127.0.0.1) : 서버 주소(ip), 내컴퓨터가 localhost(예약어) -->
+    <!-- 3000 : 포트번호, 프로그램마다 사용하는 인터넷 번호 -->
+    <!-- /login : 경로, 프로그램안의 경로 -->
+    <!-- ? : 구분자(쿼리문 시작부분) -->
+    <!-- id=admin&pw=1234 : id가 admin, pw가 1234라는 key&value쌍 -->
+    <!-- 한글은 URL Encoding 형태로 입력됨 -->
+    <!-- 한양 : %ED%95%9C %EC%96%91 -->
+
+    <!-- 연습문제 -->
+    <!-- GET방식의 주소문자열을 완성하시오. -->
+    <!-- 요구사항 -->
+    <!-- 1. HTTP GET방식 -->
+    <!-- 2. 서버주소는 www.mysite.com(172.182.381.273)이다. -->
+    <!-- 3. 포트 번호는 8080 -->
+    <!-- 4. 경로는 /mypage/qna -->
+    <!-- 5. 보내고자 하는 데이터는 phone=01012341234, address=한양 -->
+    <!-- A : http://www.mysite.com/mypage/qna?phone=01012341234&address=한양 -->
+
+    <!-- IP Address : 인터넷상의 유일한 PC주소 -->
+    <!-- IPv4 -->
+    <!-- 0~255.0~255.0~255.0~255 -->
+    <!-- 127.0.0.1 : 내 PC 주소 -->
+
+    <!-- HTTP POST 방식 -->
+    <!-- http://localhost:3000/login -->
+    <!-- 실제 데이터는 http 통신 패킷안에 body 부분에 감춰서 전송됨. -->
+  </head>
+  <body>
+    <!-- form : input 태그의 내용을 서버로 전송하는 태그 -->
+    <!-- action : 요청을 보낼 서버주소 -->
+    <!-- method : 전송방식 GET/POST -->
+    <form action="http://www.myserver.com" method="GET">
+      <input type="text" name="id" /> <br />
+      <input type="password" name="pw" /> <br />
+      <input type="submit" value="submit" />
+    </form>
+  </body>
+</html>
