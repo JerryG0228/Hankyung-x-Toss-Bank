@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>n번째 선택자 - n 변수 사용</title>
+    <style>
+      /* 전부 적용 */
+      li:nth-child(n) {
+        color: tomato;
+      }
+      /* 짝수번째만 선택 */
+      li:nth-child(2n) {
+        background-color: teal;
+      }
+      /* 홀수번째만 선택 */
+      li:nth-child(2n + 1) {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>아이템1</li>
+      <li>아이템2</li>
+      <li>아이템3</li>
+      <li>아이템4</li>
+      <li>아이템5</li>
+      <li>아이템6</li>
+      <li>아이템7</li>
+    </ul>
+  </body>
+</html>
