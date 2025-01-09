@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마진과 패딩</title>
+    <style>
+      body {
+        border: 10px solid blue;
+        margin: 0;
+        padding: 0;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+        border: 10px solid black;
+        margin: 10px; /* 상하좌우 margin 10px */
+        margin: 10px 20px; /* margin: 상하 10px, 좌우 20px */
+        margin: 10px 20px 30px 40px; /* margin: 상 10px, 우 20px, 하 30px, 좌 40px */
+        margin-top: 5px; /* 상 margin 5px */
+        border-style: dotted;
+
+        /* padding도 margin과 동일함 */
+        padding: 20px; /* 상하좌우 padding 20px */
+        padding-left: 10px; /* 좌 padding 10px */
+      }
+      span {
+        display: inline-block;
+        background-color: blue;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div><span></span></div>
+  </body>
+</html>

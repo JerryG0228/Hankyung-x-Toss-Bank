@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>display 속성</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      body * {
+        border: 1px solid red;
+      }
+      #span1 {
+        /* 공간은 차지하면서 안보임 */
+        visibility: hidden;
+        /* 공간도 사라지면서 안보임 */
+        display: none;
+      }
+      #span2 {
+        width: 100px;
+        height: 100px;
+        /* inline이면서 너비/높이 조절 가능 */
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div>div는 block 속성이다.</div>
+    <span id="span1">span</span>
+    <span id="span2">span</span>
+  </body>
+</html>

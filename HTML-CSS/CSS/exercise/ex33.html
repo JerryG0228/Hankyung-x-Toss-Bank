@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position 속성</title>
+    <!-- 웹 페이지 만드는 과정 -->
+    <!-- 화면 레이아웃(배치) - 박스모델 -->
+    <!-- 1. html 태그 -->
+    <!-- 2. 시멘틱태그(header, footer, main, section, aside) -->
+    <!-- 3. div 태그 다 넣는다. - <div id="header"> -->
+    <!-- 4. block, inline, inline-block  -->
+    <!-- 5. flexbox 정렬/배치 : float 속성(사용 안할거임) -->
+    <!-- 6. width, height -->
+    <!-- 7. overflow: hidden -->
+    <!-- 8. margin, padding -->
+    <!-- 9. position -->
+    <style>
+      #static-box {
+        position: static;
+        background-color: aqua;
+      }
+      #relative-box {
+        position: relative;
+        top: 10px;
+        background-color: blueviolet;
+      }
+      #absolute-box {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        color: white;
+        background-color: brown;
+      }
+      #fixed-box {
+        position: fixed;
+        bottom: 10px;
+        background-color: green;
+      }
+      #sticky-box {
+        position: sticky;
+        top: 0;
+        background-color: lightpink;
+      }
+    </style>
+  </head>
+  <body style="height: 200vh">
+    <div id="static-box">static</div>
+    <div id="relative-box">relative</div>
+    <div id="absolute-box">absolute</div>
+    <div id="fixed-box">fixed</div>
+    <div id="sticky-box">sticky</div>
+  </body>
+</html>
