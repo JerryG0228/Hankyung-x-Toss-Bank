@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제15 - 카카오 로그인 페이지 구현</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .body {
+        margin: 0;
+      }
+      .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+      }
+      .kakao_logo {
+        width: 88px;
+        height: 27px;
+        background-color: blue;
+        background: url("Kakao-Logo.png") no-repeat 0 0;
+        background-size: 100px 80px;
+        background-position: 0 0;
+      }
+      .login_box {
+        border: 1px solid #ccc;
+        width: 580px;
+        height: 637px;
+        padding: 80px 69px;
+      }
+      .input_form {
+        all: unset;
+        width: 440px;
+        height: 27px;
+        padding: 10px 0 8px 0;
+        border-bottom: 2px solid #ccc;
+      }
+      .save_btn {
+        margin-top: 10px;
+        width: 180px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .info_icon {
+        width: 18px;
+        height: 18px;
+        background: url("kakao-icon.png") no-repeat 0 0;
+        background-size: 250px 265px;
+        background-position: -98px -95px;
+      }
+      .login_btn_box {
+        margin-top: 40px;
+        width: 440px;
+        height: 148px;
+      }
+      .kakao_login_btn {
+        background-color: #fee500;
+        border-radius: 5px;
+        width: 440px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .qr_login_btn {
+        background-color: #ebebeb;
+        border-radius: 5px;
+        width: 440px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .small-text {
+        font-size: 12px;
+      }
+      .vertical-line {
+        height: 10px;
+        width: 1px;
+        background-color: #ccc;
+      }
+      .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="kakao_logo"></div>
+      <div class="login_box">
+        <input
+          class="input_form"
+          type="email"
+          placeholder="카카오메일 아이디, 이메일, 전화번호"
+        />
+        <input
+          class="input_form"
+          style="margin-top: 10px"
+          type="password"
+          placeholder="비밀번호"
+        />
+
+        <div class="save_btn">
+          <input type="checkbox" style="width: 18px; height: 18px" />
+          <div style="font-size: 14px; color: #666666">
+            간편로그인 정보 저장
+          </div>
+          <div class="info_icon"></div>
+        </div>
+
+        <div class="login_btn_box">
+          <div class="kakao_login_btn"><div>로그인</div></div>
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              gap: 5px;
+              padding: 15px 0;
+            "
+          >
+            <div
+              style="width: 200px; height: 1px; background-color: #ccc"
+            ></div>
+            <span style="color: #828282; font-size: 12px">또는</span>
+            <div
+              style="width: 200px; height: 1px; background-color: #ccc"
+            ></div>
+          </div>
+          <div class="qr_login_btn"><div>QR코드 로그인</div></div>
+        </div>
+
+        <div
+          style="
+            display: flex;
+            width: 440px;
+            height: 18px;
+            justify-content: space-between;
+            margin-top: 26px;
+          "
+        >
+          <div class="small-text">회원가입</div>
+          <div style="display: flex; gap: 10px; align-items: center">
+            <div class="small-text">계정 찾기</div>
+            <div class="vertical-line"></div>
+            <div class="small-text">비밀번호 찾기</div>
+          </div>
+        </div>
+
+        <div class="qr_login_btn" style="margin-top: 50px; height: 84px">
+          <img src="daum_login.png" alt="daum" width="350px" />
+        </div>
+      </div>
+
+      <div class="footer">
+        <div style="display: flex; gap: 5px; align-items: center;">
+          <div class="small-text" style="color: #686868">한국어</div>
+          <div>v</div>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="small-text" style="color: #686868">이용약관</div>
+        <div class="vertical-line"></div>
+        <div class="small-text" style="color: #666666; font-weight: bold">
+          개인정보 처리방침
+        </div>
+        <div class="vertical-line"></div>
+        <div class="small-text" style="color: #686868">고객센터</div>
+        <div style="display: flex; gap: 5px">
+          <div class="small-text" style="color: #686868">⌽</div>
+          <div class="small-text" style="color: #686868">Kakao Corp.</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
