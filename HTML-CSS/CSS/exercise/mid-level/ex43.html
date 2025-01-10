@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex-wrap</title>
+    <style>
+      .container {
+        background-color: #eee;
+        border: 1px solid #222;
+        margin-bottom: 20px;
+        display: flex;
+        max-width: 20%;
+      }
+      .box {
+        background-color: teal;
+        margin: 5px;
+        padding: 5px 45px;
+      }
+      p {
+        color: ivory;
+      }
+      .opt1 {
+        /* 줄바꿈 안함 */
+        flex-wrap: nowrap;
+      }
+      .opt2 {
+        /* 줄바꿈 함 */
+        flex-wrap: wrap;
+      }
+      .opt3 {
+        /* 아래에서 위로 줄바꿈 */
+        flex-wrap: wrap-reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container opt1">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+    </div>
+    <div class="container opt2">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+    </div>
+    <div class="container opt3">
+      <div class="box"><p>1</p></div>
+      <div class="box"><p>2</p></div>
+      <div class="box"><p>3</p></div>
+    </div>
+  </body>
+</html>

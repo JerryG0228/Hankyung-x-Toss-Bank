@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>콘텐츠 초과 처리 - overflow 속성</title>
+    <style>
+      .box {
+        width: 200px;
+        height: 100px;
+        border: 1px solid #333;
+        margin: 20px;
+      }
+      .visible {
+        overflow: visible;
+        background: lightblue;
+      }
+      .hidden {
+        overflow: hidden;
+        background: lightgreen;
+      }
+      .scroll {
+        overflow: scroll;
+        background: teal;
+      }
+      .auto {
+        overflow: auto;
+        background: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box visible">
+      visible overflow, 동해물과 백두산이 마르고 닳도록 visible overflow,
+      동해물과 백두산이 마르고 닳도록 visible overflow, 동해물과 백두산이 마르고
+      닳도록 visible overflow, 동해물과 백두산이 마르고 닳도록
+    </div>
+    <br />
+    <div class="box hidden">
+      hidden overflow, 동해물과 백두산이 마르고 닳도록 hidden overflow, 동해물과
+      백두산이 마르고 닳도록 hidden overflow, 동해물과 백두산이 마르고 닳도록
+      hidden overflow, 동해물과 백두산이 마르고 닳도록
+    </div>
+    <div class="box scroll">
+      scroll overflow, 동해물과 백두산이 마르고 닳도록 scroll overflow, 동해물과
+      백두산이 마르고 닳도록 scroll overflow, 동해물과 백두산이 마르고 닳도록
+      scroll overflow, 동해물과 백두산이 마르고 닳도록
+    </div>
+    <div class="box auto">
+      auto overflow, 동해물과 백두산이 마르고 닳도록 auto overflow, 동해물과
+      백두산이 마르고 닳도록 auto overflow, 동해물과 백두산이 마르고 닳도록 auto
+      overflow, 동해물과 백두산이 마르고 닳도록
+    </div>
+  </body>
+</html>

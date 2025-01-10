@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>img태그 이미지 배치 - object-fit 속성</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 2px solid red;
+      }
+      .img1 {
+        object-fit: fill;
+      }
+      .img2 {
+        object-fit: none;
+      }
+      .img3 {
+        object-fit: contain;
+      }
+      .img4 {
+        object-fit: cover;
+      }
+      .img5 {
+        object-fit: scale-down;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 300px;
+        gap: 10px;
+      "
+    >
+      <div><img class="box img1" src="../low-level/bg.jpg" alt="image" /></div>
+      <div><img class="box img2" src="../low-level/bg.jpg" alt="image" /></div>
+      <div><img class="box img3" src="../low-level/bg.jpg" alt="image" /></div>
+      <div><img class="box img4" src="../low-level/bg.jpg" alt="image" /></div>
+      <div><img class="box img5" src="../low-level/bg.jpg" alt="image" /></div>
+    </div>
+  </body>
+</html>
