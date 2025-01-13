@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변환 효과 - transition</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        transition: all 2s; /* 2초뒤 모든 효과가 나타남 */
+      }
+      /* 마우스 hover했을 떄 */
+      .box:hover {
+        background-color: teal; /* 배경색 teal로 변경 */
+        transform: scale(2); /* 크기 2배 커짐 */
+        translate: 50px 50px; /* 오른쪽 50px, 아래 50px 이동 */
+        border-radius: 50%; /* 둥글게 */
+      }
+      /* 마우스로 클릭했을 때 */
+      .box:active {
+        background-color: tomato; /* 배경색 tomato로 변경 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
