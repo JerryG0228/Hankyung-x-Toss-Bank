@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind를 불러오면 CSS 리셋 코드도 적용됨 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tailwind CSS 소개</title>
+  </head>
+  <body>
+    <h1>CSS 리셋된 H1은 font-size: 16px</h1>
+    <ul>
+      <li>item1</li>
+      <li>item2</li>
+      <li>item3</li>
+    </ul>
+    <!-- sizing -->
+    <!-- my-20: margin top, bottom 값을 줌 -->
+    <!-- space-y-8: 자식 요소들 간의 간격을 줌 -->
+    <!-- bg-blue-400: backgroundcolor - blue, 400 - 진한 정도 -->
+    <!-- shadow: 그림자 효과 -->
+    <!-- rounded: 모서리를 둥글게 -->
+    <div class="my-20 p-10 space-y-8 bg-blue-400 bg-opacity-50">
+      <div class="w-96 bg-white shadow rounded">w-96</div>
+      <div class="w-96 bg-white shadow rounded">w-96</div>
+    </div>
+
+    <div class="space-y-4">
+      <div class="w-96 bg-blue-400 shadow rounded">w-96</div>
+      <div class="w-80 bg-blue-400 shadow rounded">w-80</div>
+      <div class="w-72 bg-blue-400 shadow rounded">w-72</div>
+      <div class="w-64 bg-blue-400 shadow rounded">w-64</div>
+      <div class="w-60 bg-blue-400 shadow rounded">w-60</div>
+      <div class="w-56 bg-blue-400 shadow rounded">w-56</div>
+      <div class="w-52 bg-blue-400 shadow rounded">w-52</div>
+      <div class="w-48 bg-blue-400 shadow rounded">w-48</div>
+    </div>
+  </body>
+</html>

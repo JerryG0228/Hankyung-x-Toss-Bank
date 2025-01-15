@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>flexbox</title>
+  </head>
+  <body>
+    <div class="flex border-4 border-red-300 m-3">
+      <div class="p-2 border-4 border-blue-400">hello</div>
+      <div class="p-2 border-4 border-blue-400">hello</div>
+      <div class="p-2 border-4 border-blue-400">hello</div>
+    </div>
+
+    <div class="flex flex-wrap border-4 border-red-300 m-3 mt-20 w-1/2">
+      <div class="p-2 border-4 border-blue-400">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+        delectus amet, similique quibusdam recusandae fugiat quam mollitia
+        doloribus sint totam beatae quaerat aut magni! Quasi officiis
+        consectetur veniam ipsa laudantium!
+      </div>
+      <div class="p-2 border-4 border-blue-400">hello</div>
+      <div class="p-2 border-4 border-blue-400">hello</div>
+    </div>
+
+    <div class="flex border-4 border-red-300 m-3 mt-20">
+      <div class="p-2 flex-1 border-4 border-blue-400">hello</div>
+      <div class="p-2 flex-1 border-4 border-blue-400">hello</div>
+      <div class="p-2 flex-1 border-4 border-blue-400">hello</div>
+    </div>
+
+    <div
+      class="flex border-4 border-red-300 m-3 mt-20 text-center justify-around"
+    >
+      <div class="p-2 border-4 border-blue-400 w-20">hello</div>
+      <div class="p-2 border-4 border-blue-400 w-20">hello</div>
+      <div class="p-2 border-4 border-blue-400 w-20">hello</div>
+    </div>
+
+    <!-- 반응형 웹과 tailwind css 연결 -->
+    <div class="flex md:flex-row flex-col border-4 border-red-300 m-3 mt-20">
+      <div class="p-2 flex-1 border-4 border-blue-500 order-1">1 hello</div>
+      <div class="p-2 flex-1 border-4 border-blue-500 order-0">2 hello</div>
+      <div class="p-2 flex-1 border-4 border-blue-500 order-2">3 hello</div>
+      <div class="p-2 flex-1 border-4 border-blue-500 order-3">4 hello</div>
+    </div>
+  </body>
+</html>
