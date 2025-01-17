@@ -48,6 +48,54 @@
         }
       }
       document.write(max_num + "<br/>");
+
+      // 7번
+      let s_num = 0;
+      let n = 0;
+      for (let i = 1; i <= 100; i++) {
+        n = 0;
+        for (let j = 1; j <= i; j++) {
+          if (i % j == 0) {
+            n += 1;
+          }
+        }
+        if (n == 2) {
+          s_num++;
+        }
+      }
+      document.write("소수 개수: " + s_num + "<br/>");
+
+      // 8번
+      let lucky_num = [];
+      let get_num = 0;
+      let time = 0;
+      while (time != 6) {
+        get_num = Math.floor(Math.random() * 45) + 1;
+        if (!lucky_num.includes(get_num)) {
+          lucky_num.push(get_num);
+          time++;
+        }
+      }
+      document.write("로또 번호: " + lucky_num + "<br/>");
+
+      // 9번
+      let [min, max] = [13, 1];
+      let dice_n1 = 0;
+      let dice_n2 = 0;
+      let sum_dice_n = 0;
+      for (let i = 0; i < 10; i++) {
+        dice_n1 = Math.floor(Math.random() * 6) + 1;
+        dice_n2 = Math.floor(Math.random() * 6) + 1;
+        sum_dice_n = dice_n1 + dice_n2;
+        if (sum_dice_n > max) {
+          max = sum_dice_n;
+        } else {
+          if (min > sum_dice_n) {
+            min = sum_dice_n;
+          }
+        }
+      }
+      document.write("min : " + min + " | max : " + max);
     </script>
   </head>
   <body></body>
