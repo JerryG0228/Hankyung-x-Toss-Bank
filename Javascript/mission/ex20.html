@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제 6</title>
+    <script>
+      // 1번
+      for (let i = 0; i < 10; i++) {
+        document.write(i + " ");
+      }
+      document.write("<br/>");
+
+      // 2번
+      for (let i = 1; i < 10; i += 2) {
+        document.write(i + " ");
+      }
+      document.write("<br/>");
+
+      // 3번
+
+      for (let i = 1; i < 4; i++) {
+        document.write(3 * i + " ");
+      }
+      document.write("<br/>");
+
+      // 4번
+      let sum = 0;
+      for (let i = 1; i <= 100; i++) {
+        sum += i;
+      }
+      document.write(sum, "<br/>");
+
+      // 5번
+      let dice = 0;
+      for (let i = 0; i < 10; i++) {
+        dice = Math.floor(Math.random() * 6) + 1;
+        document.write(dice + " ");
+      }
+      document.write("<br/>");
+
+      // 6번
+      let max_num = 0;
+      for (let i = 0; i < 100; i++) {
+        dice = Math.floor(Math.random() * 100) + 1;
+        if (max_num < dice) {
+          max_num = dice;
+        }
+      }
+      document.write(max_num + "<br/>");
+    </script>
+  </head>
+  <body></body>
+</html>
