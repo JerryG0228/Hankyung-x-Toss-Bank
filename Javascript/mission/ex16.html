@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제 4</title>
+    <script>
+      // 연습문제
+      //1. 1~10까지의 정수중에 하나를 prompt로 입력받고,
+      //   짝수이면, "짝수입니다"
+      //   홀수이면, "홀수입니다"
+      // 1~10외의 수이면, "그외의 수입니다."
+      //2. 1~10까지의 정수중에 하나를 prompt로 3개 입력받고,
+      //  총합을 출력하시오.
+      let n = prompt("1~10 중에서 하나를 입력해주세요");
+      n = Number(n);
+
+      if (n % 2 == 0) {
+        document.write("짝수입니다");
+      } else if (n % 2 == 1) {
+        document.write("홀수입니다");
+      } else {
+        document.write("그외의 수입니다.");
+      }
+
+      const n2 = prompt("n1: 1~10까지의 정수중에 하나를 입력해주세요");
+      const n3 = prompt("n2: 1~10까지의 정수중에 하나를 입력해주세요");
+      const n4 = prompt("n3: 1~10까지의 정수중에 하나를 입력해주세요");
+      document.write(Number(n2) + Number(n3) + Number(n4));
+    </script>
+  </head>
+  <body></body>
+</html>
