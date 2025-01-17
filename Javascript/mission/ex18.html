@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연습문제 5</title>
+    <script>
+      let dice = Math.floor(Math.random() * 10) + 1;
+
+      switch (dice % 2) {
+        case 0:
+          document.write("짝수");
+          break;
+        case 1:
+          document.write("홀수");
+          break;
+      }
+
+      let n1 = String(Math.floor(Math.random() * 6) + 1);
+      let n2 = String(Math.floor(Math.random() * 6) + 1);
+      document.write(n1 + n2);
+    </script>
+  </head>
+  <body></body>
+</html>
