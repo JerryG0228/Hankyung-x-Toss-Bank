@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS 연습문제9</title>
+    <script>
+      //연습문제
+      // student KV객체를 선언하고,
+      // 이 학생의 국어, 영어, 수학 성적을 각각 70, 80,90으로 설정하고,
+      // 합산과 평균을 내는 익명함수를 각각 sum, avr로 설정하고,
+      // 익명함수를 통해, sum과 avr값을 출력하시오.
+      // 그리고 국어,영어,수학 점수도 각각 출력하시오.
+      let student = {
+        language: 70,
+        english: 80,
+        math: 90,
+        sum: () => {
+          let res = student.language + student.english + student.math;
+          return res;
+        },
+        avr: () => {
+          let average = student.sum() / 3;
+          return average;
+        },
+      };
+
+      console.log(student.sum());
+      console.log(student.avr());
+
+      console.log("국어:", student.language);
+      console.log("영어:", student.english);
+      console.log("수학:", student.math);
+      
+    </script>
+  </head>
+  <body></body>
+</html>

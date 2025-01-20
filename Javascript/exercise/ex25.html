@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열의 함수</title>
+    <script>
+      let arr0 = [];
+      let arr1 = [10, 20, 30];
+      let arr2 = new Array();
+      let arr3 = new Array(5);
+      let arr4 = new Array(10, 20, 30);
+      let arr5 = Array.of("11111");
+      let arr6 = Array.from("11111");
+
+      arr0.push(40);
+      arr0.unshift(0);
+      console.log(arr0);
+
+      arr6.splice(2, 2, 100);
+      console.log(arr6);
+
+      delete arr6[1];
+      console.log(arr6);
+
+      arr6.pop();
+      console.log(arr6);
+
+      arr6.shift();
+      console.log(arr6);
+
+      console.log(arr4.concat([1, 2, 3]));
+
+      arr4.sort();
+      console.log(arr4);
+
+      let c_arr = [2, 3, 1];
+      // let deep_arr = c_arr.map((v) => v);
+      // let deep_arr = [...c_arr];
+      let deep_arr = Array.from(c_arr);
+      console.log(c_arr.sort());
+      console.log("deep", deep_arr);
+    </script>
+  </head>
+  <body></body>
+</html>

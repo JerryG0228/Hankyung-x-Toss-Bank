@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수 Function</title>
+    <script>
+      function myFunc1() {
+        console.log("myFunc1()");
+      }
+      myFunc1();
+      function myFunc2(param) {
+        console.log("myFunc2()", param);
+      }
+      myFunc2("홍길동");
+      function myFunc3() {
+        return "홍길동2";
+      }
+      const name = myFunc3();
+      console.log(name);
+      function myFunc4(param) {
+        return param * 2;
+      }
+      console.log(myFunc4(4));
+
+      let varFunc = function () {
+        console.log("varFunc()");
+      };
+      varFunc();
+
+      let sum = (n1, n2) => {
+        console.log(n1 + n2);
+      };
+
+      let calc = (n1, n2, method) => {
+        return method(n1, n2);
+      };
+    </script>
+  </head>
+  <body></body>
+</html>
