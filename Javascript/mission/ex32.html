@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS 연습문제 10</title>
+    <script>
+      let string10 = "Hello java script world!";
+      //1."java"문자열만 추출해서 출력하시오.
+      //2."java"문자열을 "ECMA"로 바꿔서 출력하시오.
+      //3.string10을 공백으로 구분하여(Split)
+      // 배열 ["Hello", "java", "script", "world!"]을
+      // 만들어 출력하시오.
+      //4."script"문자열의 위치를 출력하시오.
+      //5. 문자 한자 한자씩 아스키코드값(유니코드값)으로 출력하시오.
+      // string10.charCodeAt( 인덱스 ) 사용
+
+      console.log("1번");
+      console.log(
+        "ver1.",
+        string10.substring(
+          string10.indexOf("java"),
+          string10.indexOf("java") + "java".length
+        )
+      );
+      console.log(
+        "ver2.",
+        string10.substr(string10.indexOf("java"), "java".length)
+      );
+
+      console.log("2번");
+      let s1 = string10.replace("java", "ECMA");
+      console.log(s1);
+
+      console.log("3번");
+      let arr = string10.split(" ");
+      console.log(arr);
+
+      console.log("4번");
+      console.log(string10.indexOf("script"));
+
+      console.log("5번");
+      for (const i in string10) {
+        console.log(i, ":", string10.charCodeAt(i));
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클래스</title>
+    <script>
+      class Person {
+        name = "홍길동";
+        walk() {
+          console.log(this.name, "- 산책중");
+        }
+      }
+      const p1 = new Person();
+      console.log(p1.name);
+      p1.walk();
+
+      class Person2 {
+        constructor(name = "홍길동", age = "none") {
+          console.log("생성자 호출됨.");
+          this.name = name;
+          this.age = age;
+        }
+      }
+      const p2 = new Person2();
+      console.log(p2.name, p2.age);
+      const p3 = new Person2("김철수", 13);
+      console.log(p3.name, p3.age);
+
+      class Person3 {
+        constructor(name, age) {
+          this._name = name; // setter 호출됨
+          this.age = age;
+        }
+        get _name() {
+          return this.name + "님 어서오세요~";
+        }
+        set _name(newValue) {
+          if (newValue) this.name = newValue;
+        }
+      }
+      const p4 = new Person3("변사또", 37);
+      console.log(p4._name);
+    </script>
+  </head>
+  <body></body>
+</html>
