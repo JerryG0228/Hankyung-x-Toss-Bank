@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let stack = [];
+      let str = "{{[()()]}([{}{}{])}";
+      let res = true;
+      for (let s of str) {
+        if (["(", "{", "["].includes(s)) stack.unshift(s);
+        else {
+          if (
+            (s === ")" && stack[0] === "(") ||
+            (s === "}" && stack[0] === "{") ||
+            (s === "]" && stack[0] === "[")
+          ) {
+            stack.shift();
+          } else {
+            res = false;
+            break;
+          }
+        }
+      }
+      res ? console.log("YES") : console.log("NO");
+    </script>
+  </head>
+  <body></body>
+</html>
