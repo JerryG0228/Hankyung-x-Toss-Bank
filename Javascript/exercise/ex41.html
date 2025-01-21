@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ineerHTML과 ineerText</title>
+  </head>
+  <body>
+    <h1 id="id1">innerHTML의 내용</h1>
+    <h1 id="id2">innerText의 내용</h1>
+    <script>
+      const header1 = document.getElementById("id1");
+      header1.innerHTML = "<ins>변경된 내용</ins>";
+
+      const header2 = document.getElementById("id2");
+      header2.innerText = "<ins>변경된 내용</ins>";
+
+      const headers = document.querySelectorAll("h1");
+      console.log(headers);
+    </script>
+  </body>
+</html>

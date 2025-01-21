@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>find, filter 함수</title>
+    <script>
+      let found = [1, 2, 3, 4, 5];
+      const n = found.find((v, idx, arr) => {
+        return v < 3;
+      });
+      console.log(n);
+
+      let f_arr = [1, 2, 3, 4, 5];
+      const res = f_arr.filter((v, idx, arr) => {
+        return v < 3;
+      });
+      console.log(res);
+    </script>
+  </head>
+  <body></body>
+</html>
