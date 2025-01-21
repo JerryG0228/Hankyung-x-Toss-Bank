@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>map함수</title>
+    <script>
+      // let arr = [10, 20, 30, 40, 50];
+      // arr.map((v, idx, arr) => console.log(v, idx, arr));
+
+      const arr = [1, 2, 3, 4, 5];
+      const arr2 = arr.map((item) => item * 2);
+      const arr3 = arr.map(String);
+      const arr4 = arr.map(Number);
+
+      const users = [
+        { id: 1, name: "hong" },
+        { id: 1, name: "park" },
+        { id: 1, name: "kim" },
+      ];
+      const userNames = users.map((user) => user.name.toUpperCase());
+      console.log(userNames);
+    </script>
+  </head>
+  <body></body>
+</html>

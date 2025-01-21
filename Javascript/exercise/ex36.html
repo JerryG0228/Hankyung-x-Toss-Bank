@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>reduce 함수</title>
+    <script>
+      const nums = [1, 2, 3, 4, 5];
+
+      const sum = nums.reduce((total, v) => (total += v), 0);
+      console.log(sum);
+
+      const max = nums.reduce((m, v) => (v > m ? v : m), -1);
+      console.log(max);
+
+      const alpha = ["a", "a", "b", "b", "c", "c", "c"];
+      const count = alpha.reduce((cnt_arr, v) => {
+        if (cnt_arr[v]) cnt_arr[v] += 1;
+        else cnt_arr[v] = 1;
+        return cnt_arr;
+      }, {});
+      console.log(count);
+    </script>
+  </head>
+  <body></body>
+</html>

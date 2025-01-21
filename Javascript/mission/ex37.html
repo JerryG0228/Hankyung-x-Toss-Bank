@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS 연습문제 11</title>
+    <script>
+      //1번
+      const users = [
+        { id: 1, name: "Alice", age: 25 },
+        { id: 2, name: "Bob", age: 30 },
+        { id: 3, name: "Charlie", age: 35 },
+      ];
+      // 각 사용자의 이름만 추출한 배열을 생성하세요.
+      // 출력결과 :  ["Alice", "Bob", "Charlie"]
+      //2번
+      const prices = [100, 200, 300];
+      // 각 가격에 10%의 세금을 추가한 배열을 생성하세요.
+      // 출력결과 : [110, 220, 330]
+      //3번
+      const matrix = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ];
+      // 각 숫자를 제곱한 1차원 배열을 만드세요.
+      //출력결과 : [1, 4, 9, 16, 25, 36, 49, 64, 81]
+      //힌트 : map함수 안에서 map함수 사용하기
+      //4번
+      const orders = [
+        { id: 1, items: [10, 20, 30] },
+        { id: 2, items: [5, 15] },
+        { id: 3, items: [100, 200] },
+      ];
+      // 각 주문의 ID와 총액(total)을 포함하는 배열을 만드세요.
+      //출력결과 : [{ id: 1, total: 60 }, { id: 2, total: 20 }, { id: 3, total: 300 }]
+
+      console.log("1번");
+      const names = users.map((user) => user.name);
+      console.log(names);
+
+      console.log("2번");
+      const tax_prices = prices.map((v) => parseInt(v * 1.1));
+      console.log(tax_prices);
+
+      console.log("3번");
+      const double_matrix = matrix
+        .map((v1) => {
+          return v1.map((v) => {
+            return Math.pow(v, 2);
+          });
+        })
+        .flat();
+      console.log(double_matrix);
+
+      console.log("4번");
+      const res = orders.map((v) => {
+        let total = v.items.reduce((tot, cur) => (tot += cur), 0);
+        return { id: v.id, total };
+      });
+      console.log(res);
+    </script>
+  </head>
+  <body></body>
+</html>

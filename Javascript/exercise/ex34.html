@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>구조분해할당과 전개연산자</title>
+    <script>
+      let arr1 = [10, 20, 30];
+      console.log(arr1[0]);
+
+      let [a, b, c] = [10, 20, 30];
+      console.log(a, b, c);
+
+      let [x, y, ...etc] = [10, 20, 30, 40, 50];
+      console.log(x, y, etc);
+
+      let [q, r] = [10, 20];
+      console.log(q, r);
+      [q, r] = [r, q];
+      console.log(q, r);
+
+      let obj = {
+        apple: 1000,
+        banana: 2000,
+      };
+      let { apple: n1, banana: n2 } = obj;
+      console.log(n1, n2);
+
+      let pet = {
+        cat: 1000,
+        dog: 2000,
+        pig: 3000,
+      };
+      let ball = {
+        baseball: 1000,
+        soccer: 2000,
+        basketball: 3000,
+      };
+      let favorit = { ...pet, ...ball };
+      console.log(favorit);
+
+      const { cat, ...rest } = pet;
+      console.log(cat);
+      console.log(rest);
+
+      const nums = [10, 20, 30];
+      function sum(...n) {
+        return n[0] + n[1] + n[2];
+      }
+      console.log(sum(...nums));
+
+      const defaultSetting = { theme: "dark", showSidebar: true };
+      const userSetting = { showSidebar: false };
+      const finalSetting = { ...defaultSetting, ...userSetting };
+      console.log(finalSetting);
+    </script>
+  </head>
+  <body></body>
+</html>
