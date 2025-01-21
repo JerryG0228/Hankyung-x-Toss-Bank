@@ -15,10 +15,10 @@
         const cntB = document.getElementById("counter-b");
 
         btnA.addEventListener("click", () => {
-          cntA.innerText++;
+          cntA.innerText = Number(cntA.innerHTML) + 1;
         });
         btnB.addEventListener("click", () => {
-          cntB.innerText++;
+          cntB.innerText = Number(cntB.innerText) + 1;
         });
       };
     </script>
