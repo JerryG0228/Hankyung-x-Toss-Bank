@@ -1,9 +1,11 @@
-let n = "123456";
-let loc = n.length - 3;
+const nums = Array.from({ length: 1001 }, (_, idx) => idx);
 
-while (n[loc - 1]) {
-  n = n.slice(0, loc) + "," + n.slice(loc);
-  loc -= 3;
-}
+const cnt_one = nums.reduce((cnt, curr) => {
+  let arr = Array.from(`${curr}`);
+  arr.forEach((v) => {
+    if (Number(v) === 1) cnt++;
+  });
+  return cnt;
+}, 0);
 
-console.log(n);
+console.log(cnt_one);
