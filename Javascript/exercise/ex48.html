@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS로 DOM 속성 변경</title>
+    <script>
+      function changeImg() {
+        if (img.getAttribute("src") === "./img/apple.png") {
+          img.setAttribute("src", "./img/dog.png");
+        } else {
+          img.setAttribute("src", "./img/apple.png");
+        }
+      }
+
+      window.onload = () => {
+        let img = document.getElementById("img");
+      };
+    </script>
+  </head>
+  <body>
+    <h1 id="name">이미지 이름</h1>
+    <button onclick="changeImg()">이미지 변경하기</button>
+    <br />
+    <br />
+    <img src="./img/apple.png" alt="apple" id="img" />
+  </body>
+</html>
