@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>순수 JS로 HTML 만들기</title>
+  </head>
+  <body>
+    <p>순수 JS로 HTML 만들기</p>
+    <div id="root"></div>
+    <script>
+      const root = document.getElementById("root");
+
+      const h1 = document.createElement("h1");
+      h1.className = "greeting";
+      h1.textContent = "Hello, world!";
+
+      root.appendChild(h1);
+    </script>
+  </body>
+</html>
