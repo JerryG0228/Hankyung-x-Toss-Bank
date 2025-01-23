@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>JS로 라디오버튼 확인</title>
+    <script>
+      function value_check() {
+        let headers = document.getElementsByTagName("h3");
+
+        let fruits = document.getElementsByName("fruit");
+        let printFruit;
+        for (let f of fruits) {
+          if (f.checked === true) {
+            printFruit = f;
+            break;
+          }
+        }
+        let fruitName = document.getElementById(printFruit.value);
+
+        headers[0].innerText = `선택된 과일 이름 : ${fruitName.innerText}`;
+        headers[1].innerText = `선택된 과일 value : ${printFruit.value}`;
+      }
+    </script>
+  </head>
+  <body>
+    <h3>선택된 과일 이름 :</h3>
+    <h3>선택된 과일 value :</h3>
+    <input type="radio" name="fruit" value="apple" checked />
+    <span id="apple">사과</span>
+    <input type="radio" name="fruit" value="strawberry" />
+    <span id="strawberry">딸기</span>
+    <input type="radio" name="fruit" value="lemon" />
+    <span id="lemon">레몬</span>
+    <input type="radio" name="fruit" value="mango" />
+    <span id="mango">망고</span>
+    <input type="radio" name="fruit" value="melon" />
+    <span id="melon">메론</span>
+    <button onclick="value_check()">체크된 객체 value 가져오기</button>
+  </body>
+</html>

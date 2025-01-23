@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>입력폼 데이터 유효성 체크</title>
+    <script>
+      function handleSubmit() {
+        let pw = document.getElementById("password");
+        let pwCheck = document.getElementById("pwCheck");
+
+        if (pw.value === pwCheck.value) alert("로그인 성공!");
+        else {
+          alert("로그인 실패");
+          event.preventDefault();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form id="myForm" name="myFormName" action="https://www.myserver.com">
+      <label for="name">이름</label><br />
+      <input type="text" name="name" id="name" /><br />
+      <label for="password">패스워드</label><br />
+      <input type="password" name="password" id="password" /><br />
+      <label for="pwCheck">패스워드 확인</label><br />
+      <input type="password" name="pwCheck" id="pwCheck" /><br />
+      <button type="submit" onclick="handleSubmit()">회원가입</button>
+    </form>
+  </body>
+</html>
