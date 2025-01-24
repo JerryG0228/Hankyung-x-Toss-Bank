@@ -1,13 +1,13 @@
 let graph = {
-  E: ["D", "A"],
-  F: ["D"],
-  A: ["E", "C", "B"],
-  B: ["A"],
-  C: ["A"],
-  D: ["E", "F"],
+  A: ["B", "C"],
+  B: ["A", "D", "E"],
+  C: ["A", "F"],
+  D: ["B"],
+  E: ["B", "F"],
+  F: ["C", "E"],
 };
 
-function bfs(gp, root) {
+function bfs(graph, root) {
   let visited = [];
   let queue = [root];
 
@@ -16,12 +16,11 @@ function bfs(gp, root) {
 
     if (!visited.includes(n)) {
       visited.push(n);
-      queue.push(...gp[n].filter((v) => !visited.includes(v)));
+      queue.push(...graph[n].filter((v) => !visited.includes(v)));
     }
   }
 
   return visited;
 }
 
-const res = bfs(graph, "E");
-console.log(res);
+console.log(...bfs(graph, "E"));
