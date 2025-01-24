@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JSX를 이용한 html 요소 생성하기</title>
+    <title>컴포넌트의 상태 값 관리하기(useState 훅(hook) 이용)</title>
     <script
       src="https://unpkg.com/react@18/umd/react.development.js"
       crossorigin
@@ -17,26 +17,27 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
-    <p>JSX를 이용한 HTML요소 생성하기(클래스형)</p>
+    <p>컴포넌트의 상태 값 관리하기(useState 훅(hook) 이용)</p>
+
     <div id="root"></div>
 
     <script type="text/babel">
-      // 리액트 클래스형 컴포넌트 정의
-      class Greeting extends React.Component {
-        // React.Component에 정의된 함수 : 함수 오버라이딩
-        render() {
-          return <h1 className="greeting">Hello, world!</h1>;
-        }
+      function MyButton() {
+        // useState: 리액트의 상태관리함수
+        const [isClicked, setIsClicked] = React.useState(false);
+        return React.createElement(
+          "button",
+          {
+            onClick: () => {
+              setIsClicked(!isClicked);
+            },
+          },
+          isClicked ? "Click!" : "UnClick!"
+        );
       }
 
-      // 리액트 함수형 컴포넌트 정의
-      const Greeting2 = <h1 className="greeting">Hello, world2</h1>;
-      // Greeting2 : JSX.Element
-
-      // ReactDom을 이용하여 컴포넌트를 root에 렌더링한다.
       const root = ReactDOM.createRoot(document.getElementById("root"));
-      root.render(React.createElement(Greeting));
-      root.render(Greeting2);
+      root.render(<MyButton />);
     </script>
   </body>
 </html>
