@@ -1,9 +1,9 @@
 import "./App.css";
 // import { E1, E2, E3, E4, E6 } from "./1-element/Element";
-import { Namecard } from "./1-element/practice-1";
+import { Greeting } from "./1-element/practice-2";
 
 function App() {
-  return <>{Namecard}</>;
+  return <>{Greeting({ name: "홍길동", age: 25 })}</>;
 }
 
 export default App;
