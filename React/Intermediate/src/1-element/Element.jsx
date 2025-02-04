@@ -17,4 +17,15 @@ const E4 = (
   </ul>
 );
 
-export { E1, E2, E3, E4 };
+function handleClick() {
+  console.log("클릭!");
+}
+
+const E6 = (
+  <>
+    <h1>이벤트 처리</h1>
+    <button onClick={handleClick}>클릭하세요</button>
+  </>
+);
+
+export { E1, E2, E3, E4, E6 };
