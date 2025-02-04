@@ -1,15 +1,15 @@
 import "./App.css";
-// import { E1, E2, E3, E4, E6 } from "./1-element/Element";
-import { info } from "./1-element/practice-3";
-
-const products = [
-  { id: 1, name: "노트북", price: 8000 },
-  { id: 2, name: "스마트폰", price: 4000 },
-  { id: 3, name: "태블릿", price: 6000 },
-];
+import { Hello, Sum, DrinkMachine, Greeting } from "./2-jsx/ex";
 
 function App() {
-  return <>{info(products)}</>;
+  return (
+    <>
+      <Hello name="홍길동" />
+      <Sum n1="3" n2="5" />
+      <DrinkMachine price="1000원" />
+      <Greeting hour="8" />
+    </>
+  );
 }
 
 export default App;
