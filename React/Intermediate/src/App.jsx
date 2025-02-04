@@ -1,13 +1,37 @@
 import "./App.css";
-import { Hello, Sum, DrinkMachine, Greeting } from "./2-jsx/ex";
+import {
+  Greeting,
+  UserCard,
+  ItemList,
+  ClickButton,
+  InfoCard,
+} from "./4-props/Ex";
 
 function App() {
   return (
     <>
-      <Hello name="홍길동" />
-      <Sum n1="3" n2="5" />
-      <DrinkMachine price="1000원" />
-      <Greeting hour="8" />
+      <Greeting name={["A", "B", "C"]} />
+      <UserCard
+        p={[
+          { name: "A", age: "20", job: "student" },
+          { name: "B", age: "20", job: "student" },
+        ]}
+      />
+      <ItemList
+        items={[
+          ["A", "B"],
+          ["C", "D"],
+        ]}
+      />
+      <ClickButton />
+      <InfoCard title="첫번째">
+        <div>a</div>
+        <div>b</div>
+      </InfoCard>
+      <InfoCard title="두번째">
+        <div>c</div>
+        <div>d</div>
+      </InfoCard>
     </>
   );
 }
