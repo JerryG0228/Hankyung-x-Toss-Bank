@@ -1,38 +1,16 @@
-import "./App.css";
-import {
-  Greeting,
-  UserCard,
-  ItemList,
-  ClickButton,
-  InfoCard,
-} from "./4-props/Ex";
+import { useState } from "react";
+import { Ex1, Ex2, Ex3 } from "./5-lifecycle,useEffect/Ex";
 
 function App() {
+  const [mount, setMount] = useState(true);
+
   return (
-    <>
-      <Greeting name={["A", "B", "C"]} />
-      <UserCard
-        p={[
-          { name: "A", age: "20", job: "student" },
-          { name: "B", age: "20", job: "student" },
-        ]}
-      />
-      <ItemList
-        items={[
-          ["A", "B"],
-          ["C", "D"],
-        ]}
-      />
-      <ClickButton />
-      <InfoCard title="첫번째">
-        <div>a</div>
-        <div>b</div>
-      </InfoCard>
-      <InfoCard title="두번째">
-        <div>c</div>
-        <div>d</div>
-      </InfoCard>
-    </>
+    <div>
+      <Ex1 />
+      <Ex2 />
+      {mount && <Ex3 />}
+      <button onClick={() => setMount(!mount)}>마운트버튼</button>
+    </div>
   );
 }
 
