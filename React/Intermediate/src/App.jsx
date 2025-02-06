@@ -1,13 +1,11 @@
-import { AddList, Colorbox, LimitedNum, PrintText, Switch } from "./6-state/Ex";
+import { CalcAvg, IncreaseNum, Texting } from "./7-hook/ex";
 
 function App() {
   return (
     <div>
-      <PrintText />
-      <Colorbox />
-      <Switch />
-      <LimitedNum />
-      <AddList />
+      <CalcAvg />
+      <IncreaseNum />
+      <Texting />
     </div>
   );
 }
