@@ -1,11 +1,11 @@
-import { CalcAvg, IncreaseNum, Texting } from "./7-hook/ex";
+import { Colorbox, Information, Limited } from "./8-event/Ex";
 
 function App() {
   return (
     <div>
-      <CalcAvg />
-      <IncreaseNum />
-      <Texting />
+      <Colorbox />
+      <Information />
+      <Limited />
     </div>
   );
 }
