@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechStore</title>
+    <style>
+      /* Css 초기화 설정 */
+      * {
+        margin: 0;
+      }
+      body {
+        background-color: #f3f5f7;
+        min-width: 480px;
+      }
+
+      /* 헤더 */
+      .header {
+        background-color: white;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 2rem;
+      }
+      .logo {
+        cursor: pointer;
+
+        color: #2662e9;
+        font-size: 2rem;
+        font-weight: 900;
+      }
+      .right-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 4rem;
+      }
+      @media screen and (max-width: 768px) {
+        .right-header {
+          display: none;
+        }
+      }
+      .menu-wrapper {
+        position: relative;
+      }
+      .menu-title {
+        cursor: pointer;
+
+        color: grey;
+        font-size: 1.3rem;
+      }
+      .menu-modal {
+        display: none;
+
+        width: 15rem;
+        background-color: white;
+        box-shadow: 0px 0px 4px 0.5px rgba(96, 96, 96, 0.2);
+        border-radius: 5px;
+
+        position: absolute;
+        left: -35px;
+        top: 35px;
+      }
+
+      .options {
+        cursor: pointer;
+
+        color: grey;
+        font-size: 1.2rem;
+        padding: 1rem 1.5rem;
+
+        &:hover {
+          background-color: #eef6ff;
+        }
+      }
+
+      /* 내용 */
+      .section {
+        padding: 3rem 2rem;
+      }
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 600;
+      }
+
+      /* 카드 */
+      .card-container {
+        margin-top: 3rem;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+      @media screen and (min-width: 1335px) {
+        .card-container {
+          grid-template-columns: repeat(3, 1fr); /* 한 줄에 최대 3개 */
+        }
+      }
+
+      @media screen and (max-width: 1334px) {
+        .card-container {
+          grid-template-columns: repeat(2, 1fr); /* 한 줄에 최대 2개 */
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .card-container {
+          grid-template-columns: repeat(1, 1fr); /* 한 줄에 1개 */
+        }
+      }
+      .card {
+        height: 10rem;
+        background-color: white;
+        border-radius: 0.5rem;
+        box-shadow: 0px 0px 4px 0.5px rgba(96, 96, 96, 0.2);
+
+        padding: 2rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        font-size: 1.7rem;
+        font-weight: 700;
+      }
+      .product-name {
+      }
+      .product-price {
+        color: #2662e9;
+      }
+      .product-info {
+        font-size: 1.2rem;
+        color: grey;
+      }
+      .product-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .category {
+        background-color: #eff7ff;
+        color: #2662e9;
+        font-size: 1.2rem;
+
+        padding: 0.3rem 1rem;
+
+        border-radius: 5rem;
+      }
+      .btn {
+        cursor: pointer;
+
+        color: white;
+        background-color: #2662e9;
+        border-radius: 0.3rem;
+        padding: 0.5rem 1rem;
+
+        &:hover {
+          background-color: #517ce1;
+          transition: 0.2s;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 헤더바 -->
+    <div class="header">
+      <div class="logo">TechStore</div>
+      <div class="right-header">
+        <div class="menu-wrapper">
+          <div class="menu-title p1">제품</div>
+          <div class="menu-modal p1-m">
+            <div class="options">전자기기</div>
+            <div class="options">의류</div>
+            <div class="options">도서</div>
+            <div class="options">액세서리</div>
+          </div>
+        </div>
+        <div class="menu-wrapper">
+          <div class="menu-title p2">서비스</div>
+          <div class="menu-modal p2-m">
+            <div class="options">컨설팅</div>
+            <div class="options">교육</div>
+            <div class="options">고객지원</div>
+            <div class="options">유지보수</div>
+          </div>
+        </div>
+        <div class="menu-wrapper">
+          <div class="menu-title p3">회사소개</div>
+          <div class="menu-modal p3-m">
+            <div class="options">회사정보</div>
+            <div class="options">팀소개</div>
+            <div class="options">채용정보</div>
+            <div class="options">연락처</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 내용 -->
+    <div class="section">
+      <div class="section-title">추천 제품</div>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-header">
+            <div class="product-name">프리미엄 노트북</div>
+            <div class="product-price">1,599,000원</div>
+          </div>
+          <div class="product-info">최신 사양의 고성능 노트북</div>
+          <div class="product-footer">
+            <div class="category">전자기기</div>
+            <div class="btn">장바구니 담기</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="product-name">무선 헤드폰</div>
+            <div class="product-price">299,000원</div>
+          </div>
+          <div class="product-info">프리미엄 사운드의 노이즈 캔슬링 헤드폰</div>
+          <div class="product-footer">
+            <div class="category">전자기기</div>
+            <div class="btn">장바구니 담기</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="product-name">스마트 워치</div>
+            <div class="product-price">399,000원</div>
+          </div>
+          <div class="product-info">피트니스 트래킹과 스마트 연결 기능</div>
+          <div class="product-footer">
+            <div class="category">전자기기</div>
+            <div class="btn">장바구니 담기</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let p1 = document.querySelector(".p1");
+      let p1Modal = document.querySelector(".p1-m");
+
+      p1.addEventListener("mouseenter", () => {
+        p1Modal.style.display = "block";
+      });
+
+      p1.addEventListener("mouseleave", () => {
+        setTimeout(() => {
+          if (!p1Modal.matches(":hover")) {
+            p1Modal.style.display = "none";
+          }
+        }, 200);
+      });
+
+      p1Modal.addEventListener("mouseleave", () => {
+        p1Modal.style.display = "none";
+      });
+
+      let p2 = document.querySelector(".p2");
+      let p2Modal = document.querySelector(".p2-m");
+
+      p2.addEventListener("mouseenter", () => {
+        p2Modal.style.display = "block";
+      });
+
+      p2.addEventListener("mouseleave", () => {
+        setTimeout(() => {
+          if (!p2Modal.matches(":hover")) {
+            p2Modal.style.display = "none";
+          }
+        }, 200);
+      });
+
+      p2Modal.addEventListener("mouseleave", () => {
+        p2Modal.style.display = "none";
+      });
+
+      let p3 = document.querySelector(".p3");
+      let p3Modal = document.querySelector(".p3-m");
+
+      p3.addEventListener("mouseenter", () => {
+        p3Modal.style.display = "block";
+      });
+
+      p3.addEventListener("mouseleave", () => {
+        setTimeout(() => {
+          if (!p3Modal.matches(":hover")) {
+            p3Modal.style.display = "none";
+          }
+        }, 200);
+      });
+
+      p3Modal.addEventListener("mouseleave", () => {
+        p3Modal.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
