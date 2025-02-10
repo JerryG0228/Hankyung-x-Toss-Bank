@@ -1,19 +1,10 @@
-import {
-  DynamicList,
-  DynamicPost,
-  FetchList,
-  ProductList,
-  TaskList,
-} from "./10-list/Ex";
+import { LiftingStateUp, ParentFruit } from "./12-shared-state/Ex";
 
 function App() {
   return (
     <div>
-      <TaskList />
-      <ProductList />
-      <DynamicList />
-      <FetchList />
-      <DynamicPost />
+      <LiftingStateUp />
+      <ParentFruit />
     </div>
   );
 }
