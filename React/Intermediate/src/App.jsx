@@ -1,9 +1,9 @@
-import Mission2 from "./14-mission2/Mission2";
+import Mission3 from "./15-mission3/Mission3";
 
 function App() {
   return (
     <div>
-      <Mission2 />
+      <Mission3 />
     </div>
   );
 }
