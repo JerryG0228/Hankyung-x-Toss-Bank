@@ -1,10 +1,9 @@
-import { LiftingStateUp, ParentFruit } from "./12-shared-state/Ex";
+import Mission2 from "./14-mission2/Mission2";
 
 function App() {
   return (
     <div>
-      <LiftingStateUp />
-      <ParentFruit />
+      <Mission2 />
     </div>
   );
 }
